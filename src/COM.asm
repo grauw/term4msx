@@ -1,0 +1,35 @@
+;
+; Term4MSX
+;
+BDOS: equ 0005H
+RDSLT: equ 000CH
+CALSLT: equ 001CH
+KEYINT: equ 0038H
+INITXT: equ 006CH
+BEEP: equ 0C0H
+KILBUF: equ 0156H
+
+RG0SAV: equ 0F3DFH
+CGPNT: equ 0F91FH
+NEWKEY: equ 0FBE5H
+JIFFY: equ 0FC9EH
+EXPTBL: equ 0FCC1H
+RG8SAV: equ 0FFE7H
+RG25SAV: equ 0FFFAH
+
+_CONOUT: equ 02H
+_STROUT: equ 09H
+_CREATE: equ 44H
+_CLOSE: equ 45H
+_WRITE: equ 49H
+
+	org	0100H
+
+	INCLUDE "Application.asm"
+	INCLUDE "YModemG.asm"
+	INCLUDE "Terminal.asm"
+	INCLUDE "Interrupt.asm"
+	INCLUDE "Log.asm"
+	INCLUDE "VDP.asm"
+	INCLUDE "Fossil.asm"
+	INCLUDE "Data.asm"
